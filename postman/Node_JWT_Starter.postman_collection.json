@@ -1,0 +1,231 @@
+{
+	"info": {
+		"_postman_id": "a9e453b0-73a5-4193-b0de-2b1fdcc3bbd3",
+		"name": "Node_JWT_Starter",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30033784"
+	},
+	"item": [
+		{
+			"name": "Auth Copy",
+			"item": [
+				{
+					"name": "User Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\":\"user\",\n\"email\":\"username@gmail.com\",\n\"password\":\"password\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/auth/register",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"asher@gmail.com\",\n    \"password\":\"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/auth/login",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Logout",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/auth/logout",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Current Token in Console",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}",
+							"host": [
+								"{{URL}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cookie Auth",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/auth/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"auth",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User Account",
+			"item": [
+				{
+					"name": "Get All User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/users",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/users/64bfba240ffd84470911f732",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"users",
+								"64bfba240ffd84470911f732"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Current User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/users/showMe",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"users",
+								"showMe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"username\",\n    \"email\":\"username@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/users/updateUser",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"users",
+								"updateUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User Password",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"oldPassword\":\"password\",\n    \"newPassword\":\"password2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/users/updateUserPassword",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"users",
+								"updateUserPassword"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
