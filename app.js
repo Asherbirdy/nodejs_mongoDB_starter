@@ -13,7 +13,6 @@ const xss = require("xss-clean");
 const cors = require("cors");
 const mongoSanitize = require("express-mongo-sanitize");
 
-// const cors = require('cors');
 // Database
 const connectDB = require("./db/connect");
 
