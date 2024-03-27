@@ -2,7 +2,7 @@ const User = require('../models/User');
 const Token = require('../models/Token');
 const { StatusCodes } = require('http-status-codes');
 const CustomError = require('../errors');
-const { attachCookieToResponse, createTokenUser } = require('../utlis');
+const { attachCookieToResponse, createTokenUser } = require('../utils');
 const crypto = require('crypto');
 
 const register = async (req, res) => {

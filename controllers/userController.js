@@ -5,7 +5,7 @@ const {
   createTokenUser,
   attachCookieToResponse,
   checkPersmission,
-} = require('../utlis');
+} = require('../utils');
 
 const getAllUsers = async (req, res) => {
   const users = await User.find({ role: 'user' }).select('-password');

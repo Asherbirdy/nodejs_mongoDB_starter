@@ -1,5 +1,5 @@
 const CustomError = require('../errors');
-const { isTokenValid, attachCookieToResponse } = require('../utlis');
+const { isTokenValid, attachCookieToResponse } = require('../utils');
 
 const authenticateUser = async (req, res, next) => {
   const { refreshToken, accessToken } = req.signedCookies;
